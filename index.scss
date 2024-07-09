@@ -1,0 +1,59 @@
+$blue: #327dda;
+$purple: #ba8dea;
+$pink: #c657e1;
+$active-box: #eee4da;
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #040404;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+h1, p {
+    color: #03080e;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+    .game-container {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    
+        .box-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 2.5%;
+            width: 80dvw;
+            height: 40dvh;
+            padding: 1em;
+            background-color: #bbada0;
+            border-radius: 0.55em;
+            @media only screen and (min-width: 768px) {
+               
+            }
+            .box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #cdc1b4;
+                font-weight: bold;
+                font-size: 2rem;
+                .blank {
+                    opacity: 0;
+                    cursor: default;
+                }
+            }
+        }
+    }
+}
